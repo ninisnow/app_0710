@@ -1,0 +1,54 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1531209529490" stop="1531209551114">
+  <name>day9.Scripts.test</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1531209529490" status="passed" stop="1531209547704">
+      <name>Test_aa.test_abc</name>
+      <attachments>
+        <attachment source="6d2f5b5e-f3c7-4572-8d28-02ca9a767034-attachment.txt" title="描述" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="95588-MainThread"/>
+        <label name="host" value="DESKTOP-OP9R1TR"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1531209547714" status="failed" stop="1531209551114">
+      <name>Test_aa.test_efg</name>
+      <failure>
+        <message>FileNotFoundError: [Errno 2] No such file or directory: './Screen/1531209550.png'</message>
+        <stack-trace>self = &lt;day9.Scripts.test.Test_aa object at 0x000001E8AB9CDCC0&gt;
+
+    def test_efg(self):
+        self.driver.find_element_by_xpath("//*[contains(@text,""分类)]").click()
+        time.sleep(2)
+&gt;       assert False,self.get_screen()
+
+Scripts\test.py:27: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;day9.Scripts.test.Test_aa object at 0x000001E8AB9CDCC0&gt;
+
+    def get_screen(self):
+        image_name = "./Screen/%d.png" % int(time.time())
+        self.driver.get_screenshot_as_file(image_name)
+&gt;       with open(image_name,"rb") as f:
+E       FileNotFoundError: [Errno 2] No such file or directory: './Screen/1531209550.png'
+
+Scripts\test.py:17: FileNotFoundError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="95588-MainThread"/>
+        <label name="host" value="DESKTOP-OP9R1TR"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>
